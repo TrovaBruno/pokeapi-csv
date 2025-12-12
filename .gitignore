@@ -1,0 +1,32 @@
+# ─────────── Arquivos Python ───────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ─────────── Virtualenv ───────────
+venv/
+.env/
+.env
+
+# ─────────── Logs ───────────
+dados/logs/
+
+# ─────────── Arquivos temporários ───────────
+*.tmp
+*.log
+
+# ─────────── Arquivos gerados pelo seu projeto ───────────
+*.csv
+
+# ─────────── VS Code ───────────
+.vscode/
+
+# ─────────── Cache de ferramentas ───────────
+.mypy_cache/
+.pytest_cache/
+.cache/
+
+# ─────────── Build/Distribuição ───────────
+dist/
+build/
