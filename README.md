@@ -1,4 +1,4 @@
-# PokéDex CSV com Python e Flask
+# Poke API
 
 Este projeto é um mini-experimento para praticar **Python**, **Flask**, **consumo de APIs REST**, manipulação de **JSON aninhado**, criação de **logs em arquivo**, uso de **Makefile** e geração de **CSV** utilizando a [PokéAPI v2](https://pokeapi.co/docs/v2).
 
@@ -53,12 +53,13 @@ pokeapi-csv/
 ├── requirements.txt
 ├── dados/
 │   └── logs/           # logs não versionados
-├── app.py              # ponto de entrada do Flask
+├── app.py
+├── main.py          # ponto de entrada do Flask
 ├── models/
 │   └── pokemon.py      # definição de modelos/datatypes
 ├── services/
 │   ├── pokeapi_client.py   # funções para consumir a PokéAPI
-│   ├── pokemon_service.py  # funções para processar/achatar dados
+│   ├── pokeapi_service.py  # funções para processar/achatar dados
 │   └── csv_exporter.py     # funções para exportar CSV
 ├── views/
 │   └── pokedex_view.py     # rotas Flask (controllers/views)
@@ -66,3 +67,4 @@ pokeapi-csv/
     ├── test_pokeapi_client.py
     ├── test_pokemon_service.py
     └── test_csv_exporter.py
+
