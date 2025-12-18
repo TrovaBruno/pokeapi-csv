@@ -1,7 +1,7 @@
 from flask import Flask
 import logging
 
-from app.services.pokeapi_service import listar_pokemons
+from app.services.pokeapi_service import listar_pokemons, detalhar_pokemon
 from app.config.app_logging import setup_logger
 
 def create_app():
@@ -18,6 +18,9 @@ def create_app():
     @app.route("/pokemons")
     def pokemons():
         return listar_pokemons()
+    @app.route("/pokemon/<nome>")
+    def pokemon(nome):
+        return detalhar_pokemon(nome)
     
     return app
 if __name__ == "__main__":
