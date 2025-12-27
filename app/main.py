@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import logging
 
 from app.services.pokeapi_service import listar_pokemons, detalhar_pokemon
@@ -13,17 +13,16 @@ def create_app():
 
     @app.route("/")
     def index():
-        logger.info("Rota / acessada")
-        return "API Pokemon rodando!"
+        logger.info("Health check acessado")
+        return jsonify(status="ok")
+
     @app.route("/pokemons")
     def pokemons():
         return listar_pokemons()
+
     @app.route("/pokemon/<nome>")
     def pokemon(nome):
         return detalhar_pokemon(nome)
-    
+
     return app
-if __name__ == "__main__":
-    app = create_app()
-    app.run(debug=True)
 
