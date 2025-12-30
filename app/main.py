@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 import logging
 
-from app.services.pokeapi_service import listar_pokemons, detalhar_pokemon
+from app.services.pokeapi_service import listar_pokemons_service, detalhar_pokemon_service
 from app.config.app_logging import setup_logger
 
 def create_app():
@@ -18,11 +18,11 @@ def create_app():
 
     @app.route("/pokemons")
     def pokemons():
-        return listar_pokemons()
+        return listar_pokemons_service()
 
     @app.route("/pokemon/<nome>")
     def pokemon(nome):
-        return detalhar_pokemon(nome)
+        return detalhar_pokemon_service(nome)
 
     return app
 
