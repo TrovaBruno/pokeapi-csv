@@ -2,7 +2,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def achatar_pokemon(pokemon_json: dict) -> dict:
+def flatten_pokemon(pokemon_json: dict) -> dict:
     logger.debug("Achatando Pokémon %s", pokemon_json.get("name"))
 
     pokemon_flat = {
